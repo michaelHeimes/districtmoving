@@ -17,10 +17,7 @@
         <link rel="profile" href="http://gmpg.org/xfn/11">
 
         <?php wp_head(); ?>
-    
-       
-        <!-- <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/custom.css" type="text/css" media="screen" /> -->
-        <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/custom.css?ver=<?php echo rand(111, 999) ?>">
+               
     </head>
 
     <body <?php body_class(); ?>>

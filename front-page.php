@@ -9,6 +9,7 @@
  * @version 1.0
  */
 get_header();
+$heroBg = get_post_thumbnail_id();
 ?>
 
 <div id="primary" class="content-area"> 
@@ -16,8 +17,13 @@ get_header();
     <main id="main" class="site-main">
         <section class="pro-primary-hero">
 
-            <div class="hero-home__item" style="background: radial-gradient(ellipse at center,rgba(0,0,0,.30) 0,transparent 100%),url('/wp-content/uploads/2022/02/home-1.jpg') no-repeat center/cover;height: 640px;">
-
+            <div class="hero-home__item">
+                <?php if( !empty( $heroBg ) ) {
+                    $imgID = $heroBg;
+                    $img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
+                    $img = wp_get_attachment_image( $imgID, 'home-hero', false, [ "class" => "hero-img", "alt"=>$img_alt, "loading" => "lazy"] );
+                    echo $img;
+                }?>
                 <div class="container">
 
                     <div class="hero-home__info wow fadeInLeft " style="position: relative; padding-top: 250px; color: #fff;z-index: 3;">

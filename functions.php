@@ -80,6 +80,13 @@ if ( ! function_exists( 'districtmoving_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+    
+        // Custom Image Sizes
+        add_image_size('home-hero', 2826, 1280, true);
+        add_image_size('service-card', 1020, 400, true);
+        add_image_size('service-post', 1440, 1440, true);
+        add_image_size('team-member-thumb', 300, 376, true);
+        add_image_size('blog-thumb', 670, 400, true);
 	}
 endif;
 add_action( 'after_setup_theme', 'districtmoving_setup' );
@@ -218,6 +225,9 @@ function districtmoving_scripts() {
 	  wp_enqueue_script( 'districtmoving-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.min.js', array(), '20151215', true );
   
 	  wp_enqueue_script( 'districtmoving-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '20151215', true );
+    
+      wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
+
   
 	  wp_enqueue_script( 'districtmoving-script', get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
   

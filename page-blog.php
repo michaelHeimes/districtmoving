@@ -56,7 +56,7 @@ if ($blog_query->have_posts()) :
                 <li class="single-blog-post">
                     <?php if (has_post_thumbnail()) : ?>
                         <div class="post-full">
-                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
+                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('blog-thumb'); ?></a>
                         </div>
                     <?php endif; ?>
                     <div class="post-meta">

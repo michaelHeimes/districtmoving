@@ -42,14 +42,19 @@
 					$servicesShortDesc = get_post_meta($post->ID, 'short_description', true);
 					$servicesTitle = get_post_field('post_title',$post->ID);
 					// $servicesImage =  get_field('image_service');
-					$servicesImage = get_the_post_thumbnail_url( $post->ID, 'full' );
+					$servicesImageID = get_post_thumbnail_id( $post->ID);
 				?>
 
 				<div class="col-lg-3 col-md-6">
 					<article class="service">
 
-						<header class="service__header" style='background: url("<?php echo $servicesImage; ?>") center/cover no-repeat;'>
-						
+						<header class="service__header">
+							<?php if( !empty( $servicesImageID ) ) {
+								$imgID = $servicesImageID;
+								$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
+								$img = wp_get_attachment_image( $imgID, 'service-card', false, [ "class" => "", "alt"=>$img_alt] );
+								echo $img;
+							}?>						
 						</header>
 						<section class="service__section">
 							<h4 class="service__title"><?php echo $servicesTitle ?></h4>

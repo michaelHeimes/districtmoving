@@ -68,7 +68,7 @@ get_header(); ?>
 								$emailAddress = explode("@",get_post_meta($post->ID, 'email_address', true))[0];
 								$servicesTitle = get_post_field('post_title',$post->ID);
 								$postContent =   get_post_field('post_content',$post->ID);
-								$servicesImage = get_the_post_thumbnail( $post->ID, 'full' );
+								$servicesImage = get_the_post_thumbnail( $post->ID, 'team-member-thumb' );
 								$count ++ ;
 							?>
 

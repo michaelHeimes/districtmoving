@@ -14,7 +14,7 @@ get_header(); ?>
 		<?php //get_template_part( 'template-parts/content', 'slider' ); ?>
 		<?php
 								
-			$bgImage = get_the_post_thumbnail_url();
+			$bgImage = get_post_thumbnail_id();
 			$heroBg = get_field('background_district_moving');
 			$heroTitle = get_field('title_page_hero');
 			$heroContent = get_field('content_page_hero');
@@ -81,7 +81,14 @@ get_header(); ?>
 						</div>
 					<?php endif; ?>
 				</div><!-- .container -->
-				<div class="hero-photo" style="background: url(<?php echo $bgImage; ?>) no-repeat center/cover;"></div>
+				<div class="hero-photo">
+					<?php if( !empty( $bgImage ) ) {
+						$imgID = $bgImage;
+						$img_alt = trim( strip_tags( get_post_meta( $imgID, '_wp_attachment_image_alt', true ) ) );
+						$img = wp_get_attachment_image( $imgID, 'service-post', false, [ "class" => "hero-img", "alt"=>$img_alt] );
+						echo $img;
+					}?>
+				</div>
 			</div>
 		</section>
 

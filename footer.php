@@ -60,7 +60,13 @@ $bar_color = get_field('background_color','option');
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script src="<?php bloginfo('template_url'); ?>/js/custom.js?ver=2022"></script>
+
+
+<script defer type="text/javascript" src="https://birdeye.com/embed/v6/136518/1/1131176712/611b25f052aea87ce8a2d2a984ae0f4b5174bdd55ac53c68"></script><div id="bf-revz-widget-1131176712"></div>
+
+<style>
+	#chat-application {display:none !important;}
+</style>
 
 <div id="mni-membership-637655569955885788"></div>
 <script src="https://charlescountychamber.chambermaster.com/Content/Script/Member.js" type="text/javascript"></script>

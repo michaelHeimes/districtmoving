@@ -20,26 +20,24 @@
 			]
 		});
 		
-		jQuery(document).ready(function ($) {
-			// dropdown toggle
-			jQuery(".caret").on("click", function (e) {
-				  e.preventDefault();
-				jQuery('.sub-menu').toggle(); 
-			});
-		
-			var url = jQuery(location).attr('href');
-			var parts = url.split("/");
-			var last_part = parts[parts.length-2];
-			if( last_part == "government-moving-services"){
-				jQuery("#input_1_5").val("Govemment");
-			}else if(last_part == "storage-services"){
-				jQuery("#input_1_5").val("Storage");
-			}else if(last_part == "residential-moving-services"){
-				jQuery("#input_1_5").val("Household");
-			}else if(last_part == "commercial-moving-services"){
-				jQuery("#input_1_5").val("Commercial");
-			}
-		});  
+		// dropdown toggle
+		jQuery(".caret").on("click", function (e) {
+			  e.preventDefault();
+			jQuery('.sub-menu').toggle(); 
+		});
+	
+		var url = jQuery(location).attr('href');
+		var parts = url.split("/");
+		var last_part = parts[parts.length-2];
+		if( last_part == "government-moving-services"){
+			jQuery("#input_1_5").val("Govemment");
+		}else if(last_part == "storage-services"){
+			jQuery("#input_1_5").val("Storage");
+		}else if(last_part == "residential-moving-services"){
+			jQuery("#input_1_5").val("Household");
+		}else if(last_part == "commercial-moving-services"){
+			jQuery("#input_1_5").val("Commercial");
+		}
 
     $(window).scroll(function() {
 			if ($(this).scrollTop() > 50) {
@@ -228,5 +226,26 @@
 		// 	}
 		// });
 	});
+	
+	
+	
+	//Imports from Custom JS Plugin
+	
+	// Blue Border
+	$('img.blue-border').each(function() {
+		// Wrap the image in a figure tag
+		$(this).wrap('<figure class="blue-box"></figure>');
+	
+	  });
+		
+		
+	// mobile menu js
+	if ($(window).width() < 768) {
+		jQuery('.top-header').find('.info-left li').addClass('new_menu');
+	   let tg = jQuery('.top-header').find('.info-left').html();
+		let tg2 = jQuery('.top-header').find('#cnss_widget-2').html();
+		$( tg ).insertAfter( "#menu-item-25" );
+		$( '<li class="social_icons_custom">'+tg2+'</li>' ).insertBefore( "#menu-item-428" );
+	}
 
 })( jQuery );
