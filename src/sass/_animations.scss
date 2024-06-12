@@ -1,0 +1,125 @@
+@keyframes appearance2_elems{
+	0%, 50%, 100% {
+		opacity:0;
+	}
+	5%, 45% {
+		opacity:1;
+	}
+}
+@keyframes appearance3_elems{
+	0%, 33%, 100% {
+		opacity:0;
+	}
+	2%, 31% {
+		opacity:1;
+	}
+}
+@keyframes appearance4_elems{
+	0%, 25%, 100% {
+		opacity:0;
+	}
+	1%, 24% {
+		opacity:1;
+	}
+}
+#element__1{
+	position: absolute;
+	right: 1%;
+	top: 200px;
+	opacity: 0;
+	z-index: 1;
+	transition: 2s all;
+	&.inView{
+		right: 4%;
+		opacity: 1;
+		top: 350px;
+		animation: animationFrames linear 8s, appearance2_elems linear 20s;
+		animation-delay: 0s;
+		animation-iteration-count: infinite;
+		transform-origin: 50% 50%;
+	}
+	@keyframes animationFrames{
+		0%, 100% {
+			transform: translate(0px, 0px);
+		}
+		50% {
+			transform: translate(0px, 50px);
+		}
+	}
+}
+
+
+#element__2{
+	position: absolute;
+	left: 2%;
+	top: 700px;
+	z-index: 1;
+	transition-delay: 10s;
+	opacity: 0;
+	transition: 2s all ease;
+	&.inView{
+		top: 650px;
+		animation: animationFrames2 linear 8s, appearance2_elems linear 20s;
+		animation-delay: 10s;
+		animation-iteration-count: infinite;
+		transform-origin: 100% 100%;
+	}
+	@keyframes animationFrames2{
+		0%, 100% {
+			opacity:1;
+			transform: translate(-10px,0px) rotate(-7deg);
+		}
+		25%, 75% {
+			opacity:1;
+			transform: translate(0px, 30px) ;
+		}
+		50% {
+			opacity: 0.6;
+			transform: translate(10px,0px) rotate(7deg);
+		}
+	}
+}
+
+
+#element__4{
+	position: absolute;
+	opacity: 0;
+	right: 1%;
+	top: 0px;
+	&.inView{
+		right: 6%;
+		animation: appearance3_elems linear 30s;
+		animation-iteration-count: infinite;
+		transform-origin: 50% 50%;
+	}
+}
+
+
+#element__5{
+	position: absolute;
+	opacity: 0;
+	bottom: 250px;
+	right: 5%;
+	&.inView{
+		right: 1%;
+		animation: appearance3_elems linear 30s;
+		animation-delay: 10s;
+		animation-iteration-count: infinite;
+		transform-origin: 50% 50%;
+	}
+}
+
+
+#element__6{
+	position: absolute;
+	opacity: 0;
+	left: -199px;
+	top: 100px;
+	&.inView{
+		left: 2%;
+		animation: appearance3_elems linear 30s;
+		animation-delay: 20s;
+		animation-iteration-count: infinite;
+		transform-origin: 50% 50%;
+	}
+}

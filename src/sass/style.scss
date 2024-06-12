@@ -1,0 +1,41 @@
+@import "bootstrap/bootstrap.scss";
+
+//var
+@import "_variables.scss";
+@import "_reset.scss";
+
+@import "_animation.scss";
+
+//grid
+@import "_grid.scss";
+@import "_slider.scss";
+@import "_fonts.scss";
+@import "_typography.scss";
+@import "_mixins.scss";
+
+//forms
+@import "_forms.scss";
+
+//elements
+@import "_header.scss";
+@import "_footer.scss";
+@import "_animations.scss";
+
+//pages
+@import "_home.scss";
+
+//lib
+@import "_jquery.qtip.scss";
+
+//responsive
+@import "responsive.scss";
+
+
+@import "_custom.scss";
+
+@import "_old-stylesheet.scss";
+
+
+html {
+	font-size: 15px;
+}

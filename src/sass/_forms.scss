@@ -1,0 +1,110 @@
+.primary-slider {
+	margin-bottom: 20px;
+}
+.home {
+	.entry-content {
+		margin: 0;
+	}
+}
+.style-input {
+  position: relative;
+	margin-bottom: 5px;
+	&.not-empty {
+		label {
+			top: -15px;
+			font-size: 10px;
+		}
+		.focus-border {
+			width: 100%;
+    	transition: 0.4s;
+		}
+	}
+  label {
+		font-size: 14px;
+		color: $s;
+		font-family: $fm;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.25s cubic-bezier(0.2, 0, 0.03, 1);
+    pointer-events: none;
+  }
+	input,textarea {
+		border-top:0;
+		border-left: 0;
+		border-right: 0;
+		width: 100%;
+		padding: 10px 15px;
+		border-radius:0;
+		border-color: #333333;
+		&:focus {
+			outline:none;
+
+		}
+	}
+	textarea {
+		height: 160px;
+	}
+}
+
+.row-contact {
+	p {
+		margin-bottom: 0;
+	}
+	br {
+		display: none;
+	}
+}
+.style-textarea {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	.focus-border {
+		top: auto;
+		bottom: 5px;
+	}
+}
+
+.focus-border {
+	position: absolute;
+	top: 42px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: $p;
+	transition: 0.4s;
+}
+.btn-form {
+	text-align: center;
+	.wpcf7-submit {
+		background-color: $p;
+		border-color: $p;
+		font-family: $fm;
+		font-size: 16px;
+		color: $w;
+		text-transform: uppercase;
+		border-radius:20px;
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.style-file {
+	margin-top: 20px;
+	> label {
+		color: $s;
+		font-family: $fm;
+	}
+	input {
+		display: none;
+	}
+}
+
+.chose-file {
+	border-radius: 20px;
+	background-color: $p;
+	padding: 10px 15px;
+	cursor: pointer;
+	color: $w;
+}
